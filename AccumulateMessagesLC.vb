@@ -41,7 +41,7 @@ Enter 'clear' at any time to delete messages")
         If clear Then
             userMessage = ""
         ElseIf newMessage = "call" Then
-            'this is intentionally left blank.  Didn't want to
+            'this is intentionally left blank.  Didn't want to have the message box display the word call.
         Else
             userMessage &= newMessage & vbNewLine
 
