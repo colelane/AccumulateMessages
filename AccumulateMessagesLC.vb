@@ -17,8 +17,8 @@ Module AccumulateMessagesLC
         Dim clearData As Boolean
 
         Console.WriteLine($"Enter messages and they will be stored. 
-Enter call at any time to read stored messages.
-Enter clear at any time to delete messages")
+Enter 'call' at any time to read stored messages.
+Enter 'clear' at any time to delete messages")
         Do
             userInput = Console.ReadLine()
             If userInput = "call" Then
