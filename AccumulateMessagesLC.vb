@@ -6,6 +6,7 @@ Option Compare Text
 'RCET 0265
 'Fall 2020
 'Accumulate Messages
+'https://github.com/colelane/AccumulateMessages.git
 
 
 Module AccumulateMessagesLC
@@ -15,16 +16,19 @@ Module AccumulateMessagesLC
         Dim userInput As String
         Dim clearData As Boolean
 
+        Console.WriteLine($"Enter messages and they will be stored. 
+Enter call at any time to read stored messages.
+Enter clear at any time to delete messages")
         Do
             userInput = Console.ReadLine()
             If userInput = "call" Then
                 MsgBox(message)
-            ElseIf userinput = "clear" Then
+            ElseIf userInput = "clear" Then
                 clearData = True
             End If
             message = AccumulateMessage(userInput, clearData)
 
-            'Console.WriteLine(message)
+
 
             clearData = False
         Loop
@@ -32,11 +36,12 @@ Module AccumulateMessagesLC
     End Sub
     Function AccumulateMessage(ByVal newMessage As String, ByVal clear As Boolean) As String
         Static userMessage As String
-
+        'static means that when you come back to the function later, previous values are saved.
+        'the if statements store a message that can be later called up.  concatenates new messages onto the original usermessage
         If clear Then
             userMessage = ""
         ElseIf newMessage = "call" Then
-
+            'this is intentionally left blank.  Didn't want to
         Else
             userMessage &= newMessage & vbNewLine
 
