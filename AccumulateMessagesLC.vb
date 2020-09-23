@@ -16,9 +16,9 @@ Module AccumulateMessagesLC
         Dim userInput As String
         Dim clearData As Boolean
 
-        Console.WriteLine($"Enter messages and they will be stored. 
-Enter 'call' at any time to read stored messages.
-Enter 'clear' at any time to delete messages")
+        Console.WriteLine($"Enter messages and they will be stored.
+                            Enter 'call' at any time to read stored messages.
+                            Enter 'clear' at any time to delete messages")
         Do
             userInput = Console.ReadLine()
             If userInput = "call" Then
@@ -27,8 +27,6 @@ Enter 'clear' at any time to delete messages")
                 clearData = True
             End If
             message = AccumulateMessage(userInput, clearData)
-
-
 
             clearData = False
         Loop
@@ -45,10 +43,8 @@ Enter 'clear' at any time to delete messages")
         Else
             userMessage &= newMessage & vbNewLine
 
-
         End If
         Return userMessage
-
 
     End Function
 
